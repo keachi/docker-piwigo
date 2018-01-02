@@ -1,6 +1,6 @@
 FROM keachi/php-sql
 
-ENV VERSION 2.9.1
+ENV VERSION 2.9.2
 
 RUN apt-get update \
     && apt-get install -y libpng12-dev imagemagick curl unzip \
