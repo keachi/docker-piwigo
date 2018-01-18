@@ -1,7 +1,6 @@
 .DEFAULT_GOAL := help
 
 IMAGE_NAME			:= keachi/piwigo
-IMAGE_DESCRIPTION	:= "Host and share your photos with Piwigo"
 SHELL				:= /bin/bash
 
 SCMD := $(shell \
