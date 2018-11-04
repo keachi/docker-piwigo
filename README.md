@@ -32,3 +32,37 @@ Browse the demo to discover Piwigo features on gallery side and change graphical
   MySQL Table Prefix.
   Default: "&lt;empty&gt;",
   Possible Values: "&lt;string&gt;"
+
+## DOCKER COMPOSE
+
+```YAML
+version: '2'
+
+volumes:
+  db:
+  data:
+  upload:
+
+services:
+
+  db:
+    image: mariadb
+    restart: always
+    volumes:
+      - db:/var/lib/mysql
+    env_file:
+      - db.env
+
+  app:
+    image: keachi/piwigo
+    restart: always
+    links:
+      - db
+    depends_on:
+      - db
+    expose:
+      - 80/tcp
+    volumes:
+      - data:/var/www/html/_data
+      - upload:/var/www/html/upload
+```
