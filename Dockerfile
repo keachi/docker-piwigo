@@ -1,6 +1,6 @@
 FROM php:7.1-apache-jessie
 
-ENV VERSION 2.9.3
+ENV VERSION 2.9.4
 
 RUN apt-get update \
  && apt-get upgrade -y \
