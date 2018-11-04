@@ -12,23 +12,23 @@ Browse the demo to discover Piwigo features on gallery side and change graphical
 
 ### DATABASE
 
-* **DB\_HOST**:
+* **MYSQL\_HOST**:
   MySQL Server.
-  Default: ``localhost``,
+  Default: ``db``,
   Possible Values: "FQDN or IP"
-* **DB\_USER**:
+* **MYSQL\_USER**:
   MySQL User.
   Default: ``piwigo``,
   Possible Values: "&lt;string&gt;"
-* **DB\_PASS**:
+* **MYSQL\_PASSWORD**:
   MySQL Password.
   Default: "&lt;empty&gt;",
   Possible Values: "&lt;string&gt;"
-* **DB\_BASE**:
+* **MYSQL\_BASE**:
   MySQL Database.
   Default: ``piwigo``,
   Possible Values: "&lt;string&gt;"
-* **DB\_PREFIX**:
+* **MYSQL\_PREFIX**:
   MySQL Table Prefix.
   Default: "&lt;empty&gt;",
   Possible Values: "&lt;string&gt;"
