@@ -1,4 +1,4 @@
-FROM php:7.1-apache-jessie
+FROM php:7.2-apache-stretch
 
 ENV VERSION 2.9.4
 
@@ -9,7 +9,7 @@ RUN apt-get update \
         imagemagick \
         curl \
         unzip
-RUN docker-php-ext-install \
+RUN docker-php-ext-install -j$(nproc) \
         mysqli \
         pdo \
         pdo_mysql \
