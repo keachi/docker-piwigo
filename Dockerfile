@@ -25,7 +25,9 @@ RUN curl -L "http://piwigo.org/download/dlcounter.php?code=${VERSION}" -o /piwig
 RUN apt-get autoremove --purge -y unzip \
  && rm -rf /var/lib/apt/lists/*
 
-#COPY assets/database.inc.php /var/www/html/local/config/database.inc.php
+COPY assets/database.inc.php /var/www/html/local/config/database.inc.php
+RUN chown www-data: /var/www/html/local/config/database.inc.php
+RUN chmod 600 /var/www/html/local/config/database.inc.php
 
 VOLUME "/var/www/html/_data"
 VOLUME "/var/www/html/upload"
